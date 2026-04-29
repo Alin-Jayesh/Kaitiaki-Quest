@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f8f2;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-image: url(Banner.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 180px 20px;
+  position: relative;
+}
+
+/* Logo + title top-left */
+.header-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Title */
+.title-text {
+  text-align: left;
+  color: rgb(91, 41, 6);
+}
+
+.title-text h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* Button */
+.start-btn {
+  margin: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #0b9212;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #044307;
+  transform: scale(1.05);
+}
+
+/* Cards Section */
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Card */
+.card {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  border-top: 6px solid #4CAF50;
+  transition: 0.2s;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+/* images inside the cards*/
+.card-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-img {
+  transition: 0.3s;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+/* Hidden extra info */
+.extra-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.67s ease;
+}
+
+/* When clicked (expanded) */
+.card.active .extra-info {
+  max-height: 500px; 
+}
+
+/* Green background when open */
+.card.active {
+  background-color: #f0f8f0;
+}
+
+
+/* Fun Facts */
+.fun-facts {
+  background-color: #e6f4ea;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 6px solid #8B5E3C;
+}
+
+.fun-facts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fun-facts li {
+  margin: 10px 0;
+  font-size: 16px;
+}

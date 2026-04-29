@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaitiaki Quest - Game</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('bg.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+
+    .bins {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+
+#kaiti {
+  position: fixed;    
+  bottom: 1px;          
+  left: 1px;            
+  height: 350px;
+  width: auto;
+  margin: 0;          
+}
+
+
+    #food {
+      height: 300px;
+      width: auto;
+      margin-left: 150px;
+      cursor: pointer;
+    }
+
+
+    #glass, #landfill, #paper, #plastic {
+      height: 300px;
+      width: auto;
+      cursor: pointer;
+    }
+
+
+
+
+    #kaitiMessage {
+      position: absolute;
+      bottom: 250px;
+      left: 20px;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      max-width: 200px;
+    }
+
+
+    #rubbishItem {
+      height: 150px;
+      width: auto;
+      margin-top: 1px;
+      margin-bottom: 5px;
+    }
+    #scoreBoard {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgb(7, 56, 12);
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+#badge {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: translate(-50%, -50%) scale(0.5); }
+  80% { transform: translate(-50%, -50%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+  </style>
+</head>
+<body>
+
+
+<div class="bins">
+  <img src="foodwaste.png" alt="Food Bin" id="food" data-correct="food">
+  <img src="glass.png" alt="Glass Bin" id="glass" data-correct="glass">
+  <img src="landfill.png" alt="Landfill Bin" id="landfill" data-correct="landfill">
+  <img src="paper.png" alt="Paper Bin" id="paper" data-correct="paper">
+  <img src="plastic.png" alt="Plastic Bin" id="plastic" data-correct="plastic">
+</div>
+<div id="scoreBoard">Score: 0</div>
+
+<img id="badge" src="" alt="Badge" style="
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  display: none;
+  z-index: 10;
+">
+
+
+<img src="Kaiti.png" alt="Kaiti the Kiwi" id="kaiti">
+
+
+<p id="kaitiMessage">Hi! Click the correct bin for this rubbish:</p>
+<img id="rubbishItem" src="" alt="Rubbish">
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

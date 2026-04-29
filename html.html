@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kaitiaki Quest</title>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="logo.png" alt="Kaitiaki Quest Logo" class="logo">
+    <div class="title-text">
+      <h1>Kaitiaki Quest 🌿</h1>
+    </div>
+  </div>
+</header>
+
+<!--Button-->
+  <div class="center">
+    <a href="game.html" target="_blank">
+      <button class="start-btn">Play Katiaki Quest</button>
+    </a>
+  </div>
+
+  <!--Info-->
+<section class="info-section">
+
+  <div class="card" onclick="toggleCard(this)">
+<h2>Plastic</h2>
+<p>Only some plastics can be recycled.</p>
+  <img src="Plastics.jpg" alt="Plastic waste" class="card-img">
+<div class="extra-info">
+  <p>Only recycle plastics with numbers 1, 2, or 5.</p>
+  <p>Rinse bottles and containers.</p>
+  <p>Remove lids before recycling.</p>
+  <p>No plastic bags or soft plastics.</p>
+</div>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+<h2>Paper</h2>
+<p>Paper and cardboard can be recycled.</p>
+<img src="Papers.jpg" alt="Paper Waste" class="card-img">
+<div class="extra-info">
+  <p>Flatten cardboard boxes.</p>
+  <p>Keep paper clean and dry.</p>
+  <p>Newspapers, magazines and boxes are OK.</p>
+  <p>No wet or dirty paper.</p>
+</div>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+<h2>Food Waste</h2>
+<p>Food scraps go in food waste bins.</p>
+ <img src="Food.jpg" alt="Food waste" class="card-img">
+<div class="extra-info">
+  <p>Fruit and veggie scraps are good.</p>
+  <p>Leftover food can go here.</p>
+  <p>Can turn into compost.</p>
+  <p>Do not put food in recycling.</p>
+</div>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+<h2>Landfill</h2>
+<p>Items that cannot be recycled go here.</p>
+ <img src="Landfill.jpg" alt="Landfill waste" class="card-img">
+<div class="extra-info">
+  <p>Plastic bags and wrappers.</p>
+  <p>Broken items and dirty waste.</p>
+  <p>Coffee cups and nappies.</p>
+  <p>These items go to landfill.</p>
+</div>
+  </div>
+
+  <div class="card" onclick="toggleCard(this)">
+<h2>Glass</h2>
+<p>Glass bottles and jars can be recycled.</p>
+ <img src="Glasses.jpg" alt="Glass waste" class="card-img">
+<div class="extra-info">
+  <p>Rinse glass before recycling.</p>
+  <p>Remove lids.</p>
+  <p>Only bottles and jars.</p>
+  <p>No broken glass or mirrors.</p>
+</div>
+  </div>
+
+</section>
+    <!-- Fun Facts -->
+  <section class="fun-facts">
+    <h2>Fun Facts</h2>
+    <ul>
+      <li>Plastic can take hundreds of years to break down!</li>
+      <li>Recycling saves energy and helps the environment.</li>
+      <li>Sorting rubbish correctly helps protect animals.</li>
+    </ul>
+  </section>
+<script>
+function toggleCard(clickedCard) {
+  const allCards = document.querySelectorAll(".card");
+
+  allCards.forEach(card => {
+    if (card !== clickedCard) {
+      card.classList.remove("active");
+    }
+  });
+
+  if (clickedCard.classList.contains("active")) {
+    clickedCard.classList.remove("active");
+  } else {
+    clickedCard.classList.add("active");
+  }
+}
+</script>
+</body>
+</html>
